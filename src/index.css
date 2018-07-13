@@ -1,0 +1,38 @@
+.MyWidget {
+  position: relative;
+  display: flex;
+  height: 100%;
+  background-color: #d3e5ff;
+  color: #383838;
+}
+.MyWidget img {
+  height: 100%;
+  flex-grow: 0;
+}
+.MyWidget>div {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 5px 5px 0 5px;
+}
+.Title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  min-height: 35px;
+}
+.Description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Date {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-style: italic;
+}
