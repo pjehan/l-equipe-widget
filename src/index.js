@@ -48,6 +48,10 @@ class MyWidget extends Component {
       })
   }
 
+  componentWillUnmout() {
+    clearInterval(this.timer);
+  }
+
   render() {
 
     const { articles, ids, currentArticle } = this.state;
