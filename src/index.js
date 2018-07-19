@@ -15,7 +15,7 @@ class MyWidget extends Component {
 
   componentDidMount() {
     const { articles, ids } = this.state;
-    const { ApiKey } = this.props;
+    const { ApiKey, refreshInterval } = this.props;
 
     fetch('https://newsapi.org/v2/top-headlines?sources=lequipe&apiKey=' + ApiKey)
       .then(resp => resp.json())
@@ -44,7 +44,7 @@ class MyWidget extends Component {
             })
             count = count === nbArticles - 1 ? 0 : count + 1;
           });
-        }, 5000);
+        }, refreshInterval || 5000);
       })
   }
 
